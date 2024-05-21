@@ -2,9 +2,7 @@ import "./style.css";
 import logoSenac from "./pic/logo.png"
 import MenuBar from "./components/MenuBar";
 import Router from "./Router";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { MdMarkEmailUnread } from "react-icons/md";
+import CarrinhoDrawer from "./components/CarrinhoDrawer";
 
 function App() {
 
@@ -15,14 +13,14 @@ function App() {
           <header className="cabecalho">
             <div className="logo">
               < img src={logoSenac} alt="logo" />
+              <div className="item-carrinho">
+              <CarrinhoDrawer />
+              </div>
             </div>
             <MenuBar /> 
           </header>
       <Router />
       <div className="centered">
-        <FaFacebook/>
-        <FaInstagram/>
-        <MdMarkEmailUnread/>
         </div>
       </div>
    </div>

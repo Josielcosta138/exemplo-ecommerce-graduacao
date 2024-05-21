@@ -7,12 +7,13 @@
 
 .corpo {
     max-width: 100%;
-    width: 90%;
+    width: 100%;
+    margin: 1%;
 }
 
 .logo {
     display: flex;
-    width: 100px;
+    width: 100%;
 }
 
 .logo img {
@@ -23,4 +24,11 @@
 
 .cabecalho {
     padding-bottom: 2%;
+}
+
+.item-carrinho {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    padding-right: 20px;
 }

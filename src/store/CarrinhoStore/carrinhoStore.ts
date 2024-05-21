@@ -29,3 +29,9 @@ export const carregarCarrinho = () : ICarrinhoStore[] => {
 const addCarrinhoStore = (carrinho: ICarrinhoStore[]) =>{
     localStorage.setItem(CARRINHO_STORE, JSON.stringify(carrinho));
 }
+
+
+export const obterQuantidadeCarrinho = (): number => {
+    const carrinho: ICarrinhoStore[] = carregarCarrinho();
+    return carrinho.length;
+}
