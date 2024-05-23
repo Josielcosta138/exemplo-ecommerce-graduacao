@@ -24,7 +24,6 @@ export enum STATU_CODE {
 }
 
 export const apiGet = async (url : string) : Promise<IDataResponse> => {
-   
     try {
         const response : AxiosResponse = await api.get(url);
 
@@ -34,14 +33,12 @@ export const apiGet = async (url : string) : Promise<IDataResponse> => {
                 message: "Erro não mapeado"
             }
         }
-
         if (response.status === STATU_CODE.NO_CONTENT) {
             return {
                 status: response.status,
                 message: "Nenhum conteúdo foi retornado"
             }
         }
-
         return {
             status: response.status,
             message : "OK",
@@ -54,5 +51,4 @@ export const apiGet = async (url : string) : Promise<IDataResponse> => {
             message: "Erro não mapeado",
         }
     }
-
 }

@@ -21,7 +21,7 @@ const InputQuantidade : FC<InputQuantidadeProperties> = ({
                 size="small"
                 onClick={(event) =>{
                     const qtde = quantidade - 1;
-                    if(qtde >= 0){
+                    if(qtde >= 1){
                         onChange(qtde);
                         console.log("qtde" + qtde);
                     }

@@ -77,7 +77,6 @@ const ProdutosDetalhe: FC = () => {
                 if (produto) {
                         const carrinhoItem : ICarrinhoStore ={...produto, quantidade: quantidadeProduto || 0}
                         addCarrinho(carrinhoItem);
-
                         window.location.href = "/home";
                     }
                     setOpenModal(false);
