@@ -1,0 +1,8 @@
+.container-login {
+    display: flex;
+    align-items: center;
+}
+
+.text-login {
+    font-size: 12px;
+}
