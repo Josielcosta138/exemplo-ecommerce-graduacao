@@ -8,9 +8,9 @@ const MenuBar : FC = () => {
         <div className="menu">
             <ul>
                 <li><a href="/home">Home</a></li>
-                <li><a href="/produtos">Produtos</a></li>
-                <li><a href="/sobre">Sobre</a></li>
-                {/* <li><a href="/menuInicio">Menu-Inicio</a></li> */}
+                <li><a href="/BAZAR">Bazar</a></li>
+                <li><a href="/ELETRO">Eletro</a></li>
+                <li><a href="/CASA_BANHO">Casa e Banho</a></li>
             </ul>
         </div>
     </>

@@ -5,6 +5,8 @@ import Produtos from "./pages/Produtos";
 import Sobre from "./pages/Sobre";
 import MenuInicio from "./pages/MenuInicio";
 import ProdutosDetalhe from "./pages/ProdutosDetalhes";
+import Clientes from "./pages/Clientes";
+import CheckoutEndereco from "./pages/checkoutEndereco";
 
 const Router : FC = () => {
     return(
@@ -16,6 +18,9 @@ const Router : FC = () => {
                 <Route path="/sobre" element={<Sobre /> }/>
                 <Route path="/menuInicio" element={<MenuInicio />}  />
                 <Route path="/produtos/detalhes/:codigoProduto" element={<ProdutosDetalhe/>} />
+                <Route path="/:categoria" element={<Home />} />
+                <Route path="/clientes" element={<Clientes/>} />
+                <Route path="/checkout/endereco" element={<CheckoutEndereco />} />
             </Routes>
         </BrowserRouter>
     );

@@ -3,12 +3,21 @@ import { STATU_CODE, apiGet } from "../../api/RestClient";
 import { IBtnProduto, IProduto } from "./types";
 import "./index.css";
 import BotaoPadrao from "../../components/BtnPadrao";
+import { useParams } from "react-router-dom";
 
 const Home : FC = () =>{
+    const { categoria } = useParams();
     const [produtos, setProdutos] = useState<IProduto[]>([]); 
 
     const carregaProdutos = async() => {
-        const response = await apiGet("/produtos/");
+        console.log("Categoria: ",categoria);
+        let url = "/produtos/"
+
+        if (categoria) {
+            url = `/produtos/categoria/${categoria}`;
+        }
+
+        const response = await apiGet(url);
         if (response.status === STATU_CODE.OK) {
             console.log(response);
             setProdutos(response.data);
