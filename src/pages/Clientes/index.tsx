@@ -9,7 +9,7 @@ import { STATU_CODE, apiPost } from "../../api/RestClient";
 
 const Clientes : FC = ({
    
-
+  
 }) => {
     const [genero, setGeneros] = useState<string>();
     const [nome, setNome] = useState<string>();
